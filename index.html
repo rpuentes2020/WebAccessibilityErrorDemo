@@ -1,89 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Inaccessible Navigation Example</title>
-   <style>
-     .nav-link {
-       color: #fff;
-       background-color: #000; /* Poor color contrast */
-     }
-   </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Issues Demonstration</title>
+  <style>
+    .example-container {
+      border: 1px solid #ccc;
+      margin: 20px;
+      padding: 10px;
+    }
+    .example-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .incorrect, .correct {
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .incorrect {
+      background-color: #fdd;
+    }
+    .correct {
+      background-color: #dfd;
+    }
+  </style>
 </head>
 <body>
-   <nav>
-      <ul>
-        <li><a href="#" class="nav-link">Click Here</a></li>
-        <li><a href="#" class="nav-link">More Info</a></li>
-        <li><a href="#" class="nav-link">Services</a></li>
-        <li><a href="#" class="nav-link">About</a></li>
-        <li><a href="#" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-   <div style="max-width:80%; margin:2rem auto;">
-      
-   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
-      <h3>Missing or Inaccurate Alt Text for Images</h3>
-      <ol>
-         <li><img src="image1.jpg"/></li>
-         <li><img src="image2.jpg" alt="" /></li>
-         <li><img src="image3.jpg" alt="photo" /></li>
-         <li>Correct: <img src="image1.jpg" alt="Aerial view of Central Park in New York City"></li>
-      </ol>
-   </div>
-   
-   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
-      <h3>Insufficient Color Contrast</h3>
-      <ol>
-         <li><p style="color:#999; background-color:#fff;">Text with poor contrast</p></li>
-         <li><h1 style="color:#bbb; background-color:#eee;">Heading with poor contrast</h1></li>
-         <li><span style="color:#666; background-color:#f0f0f0;">Low contrast text</span></li>
-         <li>Correct: <p style="color:#000; background-color:#fff;">Text with sufficient contrast</p></li>
-      </ol>
-   </div>
-   
-   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
-      <h3>Improper Use of Headings</h3>
-      <ol>
-         <li><h1>Main Title</h1><h3>Subsection</h3><h2>Another Section</h2></li>
-         <li><h2>Subsection Title</h2><h4>Sub-subsection</h4></li>
-         <li><h1>Title</h1><strong>Subheading</strong></li>
-         <li>Correct: <h1>Main Title</h1><h2>First Section</h2><h3>Subsection</h3></li>
-      </ol>
-   </div>
-   
-   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
-      <h3>Lack of Keyboard Accessibility</h3>
-      <ol>
-         <li><button onclick="...">Click me</button> <!-- No tabindex for focus --></li>
-         <li><div onclick="...">Clickable div</div> <!-- Not keyboard accessible --></li>
-         <li><a href="#" onclick="return false;">Link</a> <!-- No keyboard support --></li>
-         <li>Correct: <button tabindex="0" onclick="...">Click me</button></li>
-      </ol>
-   </div>
-   
-   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
-      <h3>Non-Descriptive Links</h3>
-      <ol>
-         <li><a href="page.html">Click here</a></li>
-         <li><a href="document.pdf">Read more</a></li>
-         <li><a href="https://example.com">Here</a></li>
-         <li>Correct: <a href="page.html">Learn more about our services</a></li>
-      </ol>
-   </div>
-   
-</div>
+  <h1>Accessibility Issues Demonstration</h1>
 
-<script>
-   // No focus outline for keyboard navigation
-   document.querySelectorAll('.nav-link').forEach(link => {
-     link.addEventListener('focus', (e) => {
-       e.target.style.outline = 'none'; // Removes focus outline
-     });
-   });
- </script>
- 
+  <!-- 1. Color Contrast -->
+  <div class="example-container">
+    <div class="example-title">1. Color Contrast</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <p style="color: #7a7a7a; background-color: #fff;">This text has insufficient contrast.</p>
+    </div>
+    <div class="correct">
+      <h2>Correct:</h2>
+      <p style="color: #000; background-color: #fff;">This text has sufficient contrast.</p>
+    </div>
+  </div>
+
+  <!-- 2. Alternative Text for Images -->
+  <div class="example-container">
+    <div class="example-title">2. Alternative Text for Images</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <img src="example.jpg" alt="">
+    </div>
+    <div class="correct">
+      <h2>Correct:</h2>
+      <img src="example.jpg" alt="A description of the image content">
+    </div>
+  </div>
+
+  <!-- 3. Non-Descriptive Link Text -->
+  <div class="example-container">
+    <div class="example-title">3. Non-Descriptive Link Text</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <a href="document.pdf">Click here</a> to download the document.
+    </div>
+    <div class="correct">
+      <h2>Correct:</h2>
+      <a href="document.pdf">Download the document</a>.
+    </div>
+  </div>
+
+  <!-- 4. Keyboard Accessibility -->
+  <div class="example-container">
+    <div class="example-title">4. Keyboard Accessibility</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <button onclick="alert('Action performed')">Action</button>
+    </div>
+    <div class="correct">
+      <h2>Correct:</h2>
+      <button onclick="alert('Action performed')" tabindex="0">Action</button>
+    </div>
+  </div>
+
+  <!-- 5. Heading Structure -->
+  <div class="example-container">
+    <div class="example-title">5. Heading Structure</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <h1>Main Title</h1>
+      <h3>Subsection</h3>
+      <h2>Another Section</h2>
+    </div>
+    <div class="correct">
+      <h2>Correct:</h2>
+      <h1>Main Title</h1>
+      <h2>Subsection</h2>
+      <h2>Another Section</h2>
+    </div>
+  </div>
+
+  <!-- 6. Inaccessible Forms -->
+  <div class="example-container">
+    <div class="example-title">6. Inaccessible Forms</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <form>
+        <label>Username:</label>
+        <input type="text">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="correct">
+      <h2>Correct:</h2>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" aria-describedby="usernameHelp">
+        <span id="usernameHelp">Enter your username.</span>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <!-- 7. Video without Captions -->
+  <div class="example-container">
+    <div class="example-title">7. Video without Captions</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <video controls>
+        <source src="example-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="correct">
+      <h2>Correct:</h2>
+      <video controls>
+        <source src="example-video.mp4" type="video/mp4">
+        <track kind="captions" src="captions.vtt" srclang="en" label="English">
+      </video>
+    </div>
+  </div>
+
+  <!-- 8. Table Accessibility -->
+  <div class="example-container">
+    <div class="example-title">8. Table Accessibility</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <table border="1">
+        <tr>
+          <td>Product</td>
+          <td>Price</td>
+        </tr>
+        <tr>
+          <td>Apples</td>
+          <td>$1.00</td>
+        </tr>
+        <tr>
+          <td>Oranges</td>
+          <td>$1.20</td>
+        </tr>
+      </table>
+    </div>
+    <div class="correct">
+      <h2>Correct:</h2>
+      <table border="1">
+        <caption>Product Pricing</caption>
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apples</td>
+            <td>$1.00</td>
+          </tr>
+          <tr>
+            <td>Oranges</td>
+            <td>$1.20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 </body>
 </html>
-
