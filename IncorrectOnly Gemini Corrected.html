@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Issues Demonstration</title>
+  <style>
+    .example-container {
+      border: 1px solid #ccc;
+      margin: 20px;
+      padding: 10px;
+    }
+    .example-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .incorrect, .correct {
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .incorrect {
+      background-color: #fdd;
+    }
+    .correct {
+      background-color: #dfd;
+    }
+  </style>
+</head>
+<body>
+   <h1>Accessibility Issues in Navigation Demonstration</h1>
+
+  <!-- 1. Simple Navigation Issues -->
+  <div class="example-container">
+    <div class="example-title">1. Simple Navigation Issues</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <nav>
+        <ul>
+          <li><a href="#" tabindex="0">Home</a></li>
+          <li><a href="#" tabindex="1">About</a></li>
+          <li><a href="#" tabindex="2">Services</a></li>
+          <li><a href="#" tabindex="3">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Issues: Non-standard tabindex order and poor focus management.</p>
+    </div>
+    
+  </div>
+
+  <!-- 2. Dropdown Navigation Issues -->
+  <div class="example-container">
+    <div class="example-title">2. Dropdown Navigation Issues</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a href="#">Menu</a>
+            <ul>
+              <li><a href="#">Option 1</a></li>
+              <li><a href="#">Option 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <p>Issues: Inaccessible dropdown for keyboard users, no ARIA roles.</p>
+    </div>
+    
+  </div>
+
+  <!-- 3. Navigation Without Skip Link -->
+  <div class="example-container">
+    <div class="example-title">3. Navigation Without Skip Link</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Issues: No "skip to content" link for keyboard users.</p>
+    </div>
+    
+      
+    </div>
+  </div>
+
+  <!-- 4. Navigation Without Semantic Markup -->
+  <div class="example-container">
+    <div class="example-title">4. Navigation Without Semantic Markup</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <div>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Services</a></p>
+        <p><a href="#">Contact</a></p>
+      </div>
+      <p>Issues: Lacks semantic HTML structure, making it less accessible.</p>
+    </div>
+    
+  </div>
+
+
+  <h1>Accessibility Issues Demonstration</h1>
+
+  <!-- 1. Color Contrast -->
+  <div class="example-container">
+    <div class="example-title">1. Color Contrast</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <p style="color: #7a7a7a; background-color: #fff;">This text has insufficient contrast.</p>
+    </div>
+    
+  </div>
+
+  <!-- 2. Alternative Text for Images -->
+  <div class="example-container">
+    <div class="example-title">2. Alternative Text for Images</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <img src="example.jpg" alt="">
+    </div>
+    
+  </div>
+
+  <!-- 3. Non-Descriptive Link Text -->
+  <div class="example-container">
+    <div class="example-title">3. Non-Descriptive Link Text</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <a href="document.pdf">Click here</a> to download the document.
+    </div>
+    
+  </div>
+
+  <!-- 4. Keyboard Accessibility -->
+  <div class="example-container">
+    <div class="example-title">4. Keyboard Accessibility</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <button onclick="alert('Action performed')">Action</button>
+    </div>
+    
+  </div>
+
+  <!-- 5. Heading Structure -->
+  <div class="example-container">
+    <div class="example-title">5. Heading Structure</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <h1>Main Title</h1>
+      <h3>Subsection</h3>
+      <h2>Another Section</h2>
+    </div>
+    
+  </div>
+
+  <!-- 6. Inaccessible Forms -->
+  <div class="example-container">
+    <div class="example-title">6. Inaccessible Forms</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <form>
+        <label>Username:</label>
+        <input type="text">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    
+  </div>
+
+  <!-- 7. Video without Captions -->
+  <div class="example-container">
+    <div class="example-title">7. Video without Captions</div>
+    <div class="incorrect">
+      <h2>Incorrect:</h2>
+      <video controls>
+        <source src="example-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+  </div>
+
+  <!-- 8. Table Accessibility -->
+<h1>Accessibility Issues with Tables</h1>
+  <div class="example-container">
+    <div class="example-title">Examples of Common Table Accessibility Issues</div>
+    
+    <!-- 1. Missing Table Headers -->
+    <div class="incorrect">
+      <h2>Incorrect: Missing Table Headers</h2>
+      <table border="1">
+        <tr>
+          <td>Item</td>
+          <td>Price</td>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>$1.00</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>$1.20</td>
+        </tr>
+      </table>
+    </div>
+    
+
+    <!-- 2. Lack of Caption or Summary -->
+    <div class="incorrect">
+      <h2>Incorrect: No Caption or Summary</h2>
+      <table border="1">
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>$1.00</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>$1.20</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </div>
+    
+
+    <!-- 3. Improper Use of Layout Tables -->
+    <div class="incorrect">
+      <h2>Incorrect: Layout Table Misuse</h2>
+      <table border="1">
+        <tr>
+          <td><img src="logo.png" alt="Logo"></td>
+          <td><h1>Welcome to Our Website</h1></td>
+        </tr>
+      </table>
+    </div>
+    
+    
+
+    <!-- 4. Missing or Incorrect Scope Attribute -->
+    <div class="incorrect">
+      <h2>Incorrect: Missing Scope Attribute</h2>
+      <table border="1">
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>$1.00</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>$1.20</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </div>
+    
+
+    <!-- 5. Merged Cells Without Proper Markup -->
+    <div class="incorrect">
+      <h2>Incorrect: Merged Cells Without Proper Markup</h2>
+      <table border="1">
+        <tr>
+          <th>Item</th>
+          <th colspan="2">Details</th>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>Fruit</td>
+          <td>Red</td>
+        </tr>
+      </table>
+    </div>
+    
+  </div>
+
+</body>
+</html>
