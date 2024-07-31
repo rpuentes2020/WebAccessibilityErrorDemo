@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+   <div style="max-width:80%; margin:2rem auto;">
+      
+   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
+      <h3>Missing or Inaccurate Alt Text for Images</h3>
+      <ol>
+         <li><img src="image1.jpg"/></li>
+         <li><img src="image2.jpg" alt="" /></li>
+         <li><img src="image3.jpg" alt="photo" /></li>
+         <li>Correct: <img src="image1.jpg" alt="Aerial view of Central Park in New York City"></li>
+      </ol>
+   </div>
+   
+   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
+      <h3>Insufficient Color Contrast</h3>
+      <ol>
+         <li><p style="color:#999; background-color:#fff;">Text with poor contrast</p></li>
+         <li><h1 style="color:#bbb; background-color:#eee;">Heading with poor contrast</h1></li>
+         <li><span style="color:#666; background-color:#f0f0f0;">Low contrast text</span></li>
+         <li>Correct: <p style="color:#000; background-color:#fff;">Text with sufficient contrast</p></li>
+      </ol>
+   </div>
+   
+   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
+      <h3>Improper Use of Headings</h3>
+      <ol>
+         <li><h1>Main Title</h1><h3>Subsection</h3><h2>Another Section</h2></li>
+         <li><h2>Subsection Title</h2><h4>Sub-subsection</h4></li>
+         <li><h1>Title</h1><strong>Subheading</strong></li>
+         <li>Correct: <h1>Main Title</h1><h2>First Section</h2><h3>Subsection</h3></li>
+      </ol>
+   </div>
+   
+   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
+      <h3>Lack of Keyboard Accessibility</h3>
+      <ol>
+         <li><button onclick="...">Click me</button> <!-- No tabindex for focus --></li>
+         <li><div onclick="...">Clickable div</div> <!-- Not keyboard accessible --></li>
+         <li><a href="#" onclick="return false;">Link</a> <!-- No keyboard support --></li>
+         <li>Correct: <button tabindex="0" onclick="...">Click me</button></li>
+      </ol>
+   </div>
+   
+   <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
+      <h3>Non-Descriptive Links</h3>
+      <ol>
+         <li><a href="page.html">Click here</a></li>
+         <li><a href="document.pdf">Read more</a></li>
+         <li><a href="https://example.com">Here</a></li>
+         <li>Correct: <a href="page.html">Learn more about our services</a></li>
+      </ol>
+   </div>
+   
+</div>
+</body>
+</html>
+
