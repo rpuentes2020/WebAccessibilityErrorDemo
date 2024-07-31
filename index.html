@@ -3,10 +3,24 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Inaccessible Navigation Example</title>
+   <style>
+     .nav-link {
+       color: #fff;
+       background-color: #000; /* Poor color contrast */
+     }
+   </style>
 </head>
 <body>
-
+   <nav>
+      <ul>
+        <li><a href="#" class="nav-link">Click Here</a></li>
+        <li><a href="#" class="nav-link">More Info</a></li>
+        <li><a href="#" class="nav-link">Services</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
    <div style="max-width:80%; margin:2rem auto;">
       
    <div style="border:1px solid lightgrey; margin-bottom:2rem; padding:2rem;">
@@ -60,6 +74,16 @@
    </div>
    
 </div>
+
+<script>
+   // No focus outline for keyboard navigation
+   document.querySelectorAll('.nav-link').forEach(link => {
+     link.addEventListener('focus', (e) => {
+       e.target.style.outline = 'none'; // Removes focus outline
+     });
+   });
+ </script>
+ 
 </body>
 </html>
 
