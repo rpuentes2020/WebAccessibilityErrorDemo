@@ -40,132 +40,7 @@
     
   </div>
   
-   <h1>Accessibility Issues in Navigation Demonstration</h1>
-
-  <!-- 1. Simple Navigation Issues -->
-  <div class="example-container">
-    <div class="example-title">1. Simple Navigation Issues</div>
-    <div class="incorrect">
-      <h2>Incorrect:</h2>
-      <nav>
-        <ul>
-          <li><a href="#" tabindex="0">Home</a></li>
-          <li><a href="#" tabindex="1">About</a></li>
-          <li><a href="#" tabindex="2">Services</a></li>
-          <li><a href="#" tabindex="3">Contact</a></li>
-        </ul>
-      </nav>
-      <p>Issues: Non-standard tabindex order and poor focus management.</p>
-    </div>
-    <div class="correct">
-      <h2>Correct:</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <p>Solution: Use natural tab order and ensure all links are focusable.</p>
-    </div>
-  </div>
-
-  <!-- 2. Dropdown Navigation Issues -->
-  <div class="example-container">
-    <div class="example-title">2. Dropdown Navigation Issues</div>
-    <div class="incorrect">
-      <h2>Incorrect:</h2>
-      <nav class="navigation">
-        <ul>
-          <li>
-            <a href="#">Menu</a>
-            <ul>
-              <li><a href="#">Option 1</a></li>
-              <li><a href="#">Option 2</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <p>Issues: Inaccessible dropdown for keyboard users, no ARIA roles.</p>
-    </div>
-    <div class="correct">
-      <h2>Correct:</h2>
-      <nav class="navigation">
-        <ul>
-          <li>
-            <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="submenu1">Menu</a>
-            <ul id="submenu1">
-              <li><a href="#">Option 1</a></li>
-              <li><a href="#">Option 2</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <p>Solution: Use ARIA roles and properties, ensure keyboard navigation.</p>
-    </div>
-  </div>
-
-  <!-- 3. Navigation Without Skip Link -->
-  <div class="example-container">
-    <div class="example-title">3. Navigation Without Skip Link</div>
-    <div class="incorrect">
-      <h2>Incorrect:</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <p>Issues: No "skip to content" link for keyboard users.</p>
-    </div>
-    <div class="correct">
-      <h2>Correct:</h2>
-      <a href="#maincontent" class="skip-link">Skip to main content</a>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div id="maincontent">
-        <p>Main content starts here...</p>
-      </div>
-      <p>Solution: Include a "skip to content" link for easier navigation.</p>
-    </div>
-  </div>
-
-  <!-- 4. Navigation Without Semantic Markup -->
-  <div class="example-container">
-    <div class="example-title">4. Navigation Without Semantic Markup</div>
-    <div class="incorrect">
-      <h2>Incorrect:</h2>
-      <div>
-        <p><a href="#">Home</a></p>
-        <p><a href="#">About</a></p>
-        <p><a href="#">Services</a></p>
-        <p><a href="#">Contact</a></p>
-      </div>
-      <p>Issues: Lacks semantic HTML structure, making it less accessible.</p>
-    </div>
-    <div class="correct">
-      <h2>Correct:</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <p>Solution: Use semantic elements like <code>&lt;nav&gt;</code> and <code>&lt;ul&gt;</code> for better accessibility.</p>
-    </div>
-  </div>
-
+  
 
   <h1>Accessibility Issues Demonstration</h1>
 
@@ -175,6 +50,27 @@
     <div class="incorrect">
       <h2>Incorrect:</h2>
       <p style="color: #7a7a7a; background-color: #fff;">This text has insufficient contrast.</p>
+       <div style="color: #D3D3D3; background-color: #FFFFFF; padding: 10px;">Light Gray on White</div>
+    <div style="color: #FFFFE0; background-color: #FFFFFF; padding: 10px;">Pale Yellow on White</div>
+    <div style="color: #ADD8E6; background-color: #FFFFFF; padding: 10px;">Light Blue on White</div>
+    <div style="color: #98FB98; background-color: #FFFFFF; padding: 10px;">Pale Green on White</div>
+    <div style="color: #FFB6C1; background-color: #FFFFFF; padding: 10px;">Light Pink on White</div>
+    <div style="color: #F5F5DC; background-color: #FFFFE0; padding: 10px;">Beige on Light Yellow</div>
+    <div style="color: #D3D3D3; background-color: #E0FFFF; padding: 10px;">Light Gray on Light Blue</div>
+    <div style="color: #E6E6FA; background-color: #FFB6C1; padding: 10px;">Pale Blue on Pale Pink</div>
+    <div style="color: #E0FFFF; background-color: #FFFFFF; padding: 10px;">Light Cyan on White</div>
+    <div style="color: #E6E6FA; background-color: #FFFFFF; padding: 10px;">Light Lavender on White</div>
+    <div style="color: #F08080; background-color: #FFFFFF; padding: 10px;">Light Coral on White</div>
+    <div style="color: #EE82EE; background-color: #FFFFFF; padding: 10px;">Pale Violet on White</div>
+    <div style="color: #FFA07A; background-color: #FFFFFF; padding: 10px;">Light Salmon on White</div>
+    <div style="color: #98FB98; background-color: #FFFFE0; padding: 10px;">Pale Green on Pale Yellow</div>
+    <div style="color: #ADD8E6; background-color: #D3D3D3; padding: 10px;">Light Blue on Light Gray</div>
+    <div style="color: #FFDAB9; background-color: #FFFFFF; padding: 10px;">Light Peach on White</div>
+    <div style="color: #FFE4B5; background-color: #FFFFFF; padding: 10px;">Pale Orange on White</div>
+    <div style="color: #98FB98; background-color: #ADD8E6; padding: 10px;">Pale Green on Light Blue</div>
+    <div style="color: #FFFFE0; background-color: #FFFFFF; padding: 10px;">Light Yellow on White</div>
+    <div style="color: #E6E6FA; background-color: #FFB6C1; padding: 10px;">Pale Lavender on Light Pink</div>
+
     </div>
     <div class="correct">
       <h2>Correct:</h2>
