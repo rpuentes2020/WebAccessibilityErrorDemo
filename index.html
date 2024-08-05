@@ -32,7 +32,14 @@
     .correct {
       background-color: #dfd;
     }
-  </style>
+     table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+    th, td {
+      text-align: left;
+    }  </style>
 </head>
 <body>
  
@@ -269,7 +276,66 @@
         </tbody>
       </table>
     </div>
+
+
+
+    <div class="incorrect">
+    <h2>Sample Table with Form Elements</h2>
+
+<table>
+  <tr>
+    <th>Form Element</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>Form</td>
+    <td>A container for various form elements.</td>
+    <td>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Enter name">
+        <button type="submit">Submit</button>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Input</td>
+    <td>A single-line text field.</td>
+    <td>
+      <input type="text" name="email" placeholder="Enter email">
+    </td>
+  </tr>
+  <tr>
+    <td>Textarea</td>
+    <td>A multi-line text field.</td>
+    <td>
+      <textarea name="message" rows="4" cols="20" placeholder="Enter your message"></textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Select</td>
+    <td>A dropdown list.</td>
+    <td>
+      <select name="options">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Button</td>
+    <td>A clickable button.</td>
+    <td>
+      <button type="button">Click Me!</button>
+    </td>
+  </tr>
+</table>    </div>
+    
   </div>
+
+
+  
 
 </body>
 </html>
