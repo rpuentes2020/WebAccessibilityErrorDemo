@@ -62,7 +62,20 @@
       padding: 10px;
         margin-bottom:5px;
     }
-  
+
+    .table-section{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .table-items{
+      width:300px;
+      text-align:center;
+      background-color:#fbfbfb;
+    }
+    
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,8 +162,8 @@
     <div class="example-title">Examples of Common Table Accessibility Issues</div>
     
    <div class="table-section">
-    <div class="inner-div-container">
-      <p>Incorrect: Missing Table Headers</p>
+    <div class="table-items">
+      <p>Missing Table Headers</p>
       <table border="1">
         <tr>
           <td>Item</td>
@@ -166,30 +179,9 @@
         </tr>
       </table>
     </div>
-    <div class="correct">
-      <h2>Correct: With Table Headers</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <th scope="col">Item</th>
-            <th scope="col">Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Apple</td>
-            <td>$1.00</td>
-          </tr>
-          <tr>
-            <td>Orange</td>
-            <td>$1.20</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="incorrect">
-      <h2>Incorrect: No Caption or Summary</h2>
+    
+    <div class="table-items">
+      <p>No Caption or Summary</p>
       <table border="1">
         <tr>
           <th>Item</th>
@@ -208,34 +200,9 @@
         </tr>
       </table>
     </div>
-    <div class="correct">
-      <h2>Correct: With Caption</h2>
-      <table border="1">
-        <caption>Price and Quantity of Fruits</caption>
-        <thead>
-          <tr>
-            <th scope="col">Item</th>
-            <th scope="col">Price</th>
-            <th scope="col">Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Apple</td>
-            <td>$1.00</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Orange</td>
-            <td>$1.20</td>
-            <td>3</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="incorrect">
-      <h2>Incorrect: Missing Scope Attribute</h2>
+ 
+    <div class="table-items">
+      <p>Missing Scope Attribute</p>
       <table border="1">
         <tr>
           <th>Item</th>
@@ -254,33 +221,9 @@
         </tr>
       </table>
     </div>
-    <div class="correct">
-      <h2>Correct: With Scope Attribute</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <th scope="col">Item</th>
-            <th scope="col">Price</th>
-            <th scope="col">Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Apple</td>
-            <td>$1.00</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Orange</td>
-            <td>$1.20</td>
-            <td>3</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="incorrect">
-      <h2>Incorrect: Merged Cells Without Proper Markup</h2>
+  
+    <div class="table-items">
+      <p>Merged Cells Without Proper Markup</p>
       <table border="1">
         <tr>
           <th>Item</th>
@@ -293,29 +236,10 @@
         </tr>
       </table>
     </div>
-    <div class="correct">
-      <h2>Correct: With Proper Markup for Merged Cells</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <th scope="col">Item</th>
-            <th scope="col" colspan="2">Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Apple</td>
-            <td>Fruit</td>
-            <td>Red</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+   
 
-
-
-    <div class="incorrect">
-    <h2>Sample Table with Form Elements</h2>
+    <div class="table-items-skip">
+    <p>Sample Table with Form Elements</p>
     <p>Tables containing forms, inputs, buttons, textareas will be skipped.</p>
 <table>
   <tr>
