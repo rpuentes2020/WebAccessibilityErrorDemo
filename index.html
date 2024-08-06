@@ -42,7 +42,15 @@
     }
     th, td {
       text-align: left;
-    }  </style>
+    } 
+  
+      .div-contrast-div div{
+      width:45%;
+      display: inline-block;
+      padding: 7px 5px;
+    }
+  
+  </style>
 </head>
 <body>
  
@@ -71,9 +79,9 @@
   <!-- 1. Color Contrast -->
   <div class="example-container">
     <div class="example-title">1. Color Contrast</div>
-    <div class="incorrect">
+    <div class="incorrect div-contrast-div">
       <h2>Incorrect:</h2>
-      <p style="color: #7a7a7a; background-color: #fff;">This text has insufficient contrast.</p>
+      <div style="color: #7a7a7a; background-color: #fff;">This text has insufficient contrast.</div>
       <div style="color: #D3D3D3; background-color: #FFFFFF; padding: 10px;">Light Gray on White</div>
     <div style="color: #FFFFE0; background-color: #FFFFFF; padding: 10px;">Pale Yellow on White</div>
     <div style="color: #ADD8E6; background-color: #FFFFFF; padding: 10px;">Light Blue on White</div>
