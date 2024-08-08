@@ -318,27 +318,33 @@
     
   </div>
 
+   
 <div class="example-container">
+   <div class="example-title">Examples of Common Form Input Accessibility Issues</div>
  <form>
         <!-- Example 1: Missing label -->
         <div>
+            <span>Missing Label</span>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
         </div>
 
         <!-- Example 2: Placeholder used as a label -->
         <div>
+          <span>Placeholder used as a label</span>
             <input type="email" id="email" name="email" placeholder="Email">
         </div>
 
         <!-- Example 3: Insufficient color contrast -->
         <div style="color: #ccc; background-color: #fff;">
+            <span>Insufficient Color Contrast</span>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
         </div>
 
         <!-- Example 4: Missing fieldset and legend for radio buttons -->
         <div>
+            <span>Missing fieldset and legend for radio buttons</span>
             <label>Gender:</label><br>
             <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label><br>
@@ -348,24 +354,28 @@
 
         <!-- Example 5: No description for required fields -->
         <div>
+            <span>No description for required fields</span>
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" required>
         </div>
 
         <!-- Example 6: No ARIA roles for custom controls -->
         <div>
+            <span>No ARIA roles for custom controls</span>
             <label for="custom-slider">Custom Slider:</label>
             <div id="custom-slider" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
         </div>
 
         <!-- Example 7: Incorrect use of ARIA attributes -->
         <div>
+            <span>Incorrect Use of ARIA attributes</span>
             <label for="email2">Email:</label>
             <input type="email" id="email2" name="email" aria-required="true">
         </div>
 
         <!-- Example 8: Missing alt text for image buttons -->
         <div>
+            <span>Missing alt text for image buttons</span>
             <label for="search">Search:</label>
             <input type="text" id="search" name="search">
             <input type="image" src="search-icon.png" alt="">
@@ -373,6 +383,7 @@
 
         <!-- Example 9: Missing labels for dropdowns -->
         <div>
+            <span>Missine labels for dropdowns</span>
             <label for="country">Country:</label>
             <select id="country" name="country">
                 <option value="usa">United States</option>
@@ -382,7 +393,8 @@
         </div>
 
         <!-- Example 10: No error message for invalid input -->
-        <div>
+        <div> 
+            <span>No error message for invalid input</span>
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
             <!-- Error message should appear here if input is invalid -->
