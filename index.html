@@ -367,23 +367,13 @@
 
     </div>
 
-    <div class="form-item">
-          
-       <span>Insufficient Color Contrast</span>
-      <form>
-            <!-- Example 3: Insufficient color contrast -->
-            <div style="color: #ccc; background-color: #fff;">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
-            </div>
-      </form>
-    </div>
+
 
   <div class="form-item">
         <span>Missing fieldset and legend for radio buttons</span>
         <form>
           
-              <!-- Example 4: Missing fieldset and legend for radio buttons -->
+              <!-- Example 3: Missing fieldset and legend for radio buttons -->
               <div>
                   <label>Gender:</label><br>
                   <input type="radio" id="male" name="gender" value="male">
@@ -399,7 +389,7 @@
     <span>No description for required fields</span>
     <form>
       
-          <!-- Example 5: No description for required fields -->
+          <!-- Example 4: No description for required fields -->
           <div>
               <label for="age">Age:</label>
               <input type="number" id="age" name="age" required>
@@ -412,7 +402,7 @@
       
       <form>
     
-          <!-- Example 6: No ARIA roles for custom controls -->
+          <!-- Example 5: No ARIA roles for custom controls -->
           <div>
               <label for="custom-slider">Custom Slider:</label>
               <div id="custom-slider" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
@@ -425,7 +415,7 @@
     <span>Incorrect Use of ARIA attributes</span>
     <form>
       
-          <!-- Example 7: Incorrect use of ARIA attributes -->
+          <!-- Example 6: Incorrect use of ARIA attributes -->
           <div>
               <label for="email2">Email:</label>
               <input type="email" id="email2" name="email" aria-required="true">
@@ -433,25 +423,12 @@
     </form>
   </div>
 
-    <div class="form-item">
-    <span>Missing alt text for image buttons</span>
-    <form>
-    
-        <!-- Example 8: Missing alt text for image buttons -->
-        <div>
-            <label for="search">Search:</label>
-            <input type="text" id="search" name="search">
-            <input type="image" src="search-icon.webp" style="width:15px; height:15px;" alt="">
-        </div>
-  </form>
-    </div>
-
-
+  
     <div class="form-item">
           
       <span>Missing labels for dropdowns</span>
       <form>
-            <!-- Example 9: Missing labels for dropdowns -->
+            <!-- Example 7: Missing labels for dropdowns -->
             <div>                
                 <select id="country" name="country">
                     <option value="usa">United States</option>
@@ -466,7 +443,7 @@
           
       <span>No error message for invalid input</span>
       <form>  
-            <!-- Example 10: No error message for invalid input -->
+            <!-- Example 8: No error message for invalid input -->
             <div> 
                 <label for="phone">Phone:</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
