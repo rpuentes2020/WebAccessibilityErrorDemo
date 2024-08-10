@@ -335,7 +335,9 @@
    <div class="example-title">Examples of Common Form Input Accessibility Issues</div>
 
   <div class="example-forms-container">
-    
+
+    <div class="form-item">
+      
  <span>Missing Label</span>
  <form>
         <!-- Example 1: Missing label -->
@@ -344,7 +346,9 @@
             <input type="text" id="name" name="name">
         </div>
  </form>
-    
+    </div>
+
+    <div class="form-item">
   <span>Placeholder used as a label</span>
   <form>
         <!-- Example 2: Placeholder used as a label -->
@@ -353,91 +357,117 @@
         </div>
   </form>
 
-  <form>
-        <!-- Example 3: Insufficient color contrast -->
-        <div style="color: #ccc; background-color: #fff;">
-            <span>Insufficient Color Contrast</span>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-        </div>
-  </form>
+    </div>
 
-  <form>
+    <div class="form-item">
+          
+       <span>Insufficient Color Contrast</span>
+      <form>
+            <!-- Example 3: Insufficient color contrast -->
+            <div style="color: #ccc; background-color: #fff;">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+      </form>
+    </div>
+
+  <div class="form-item">
+        <span>Missing fieldset and legend for radio buttons</span>
+        <form>
+          
+              <!-- Example 4: Missing fieldset and legend for radio buttons -->
+              <div>
+                  <label>Gender:</label><br>
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label><br>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Female</label>
+              </div>
+        </form>
+  </div>
+
+    <div class="form-item">
+        
+    <span>No description for required fields</span>
+    <form>
+      
+          <!-- Example 5: No description for required fields -->
+          <div>
+              <label for="age">Age:</label>
+              <input type="number" id="age" name="age" required>
+          </div>
+    </form>
+    </div>
+
+    <div class="form-item">
+       <span>No ARIA roles for custom controls</span>
+      
+      <form>
     
-        <!-- Example 4: Missing fieldset and legend for radio buttons -->
-        <div>
-            <span>Missing fieldset and legend for radio buttons</span>
-            <label>Gender:</label><br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-        </div>
-  </form>
+          <!-- Example 6: No ARIA roles for custom controls -->
+          <div>
+              <label for="custom-slider">Custom Slider:</label>
+              <div id="custom-slider" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
+          </div>
+      </form>
+    </div>
 
-  <form>
-    
-        <!-- Example 5: No description for required fields -->
-        <div>
-            <span>No description for required fields</span>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
-        </div>
-  </form>
+  <div class="form-item">
+      
+    <span>Incorrect Use of ARIA attributes</span>
+    <form>
+      
+          <!-- Example 7: Incorrect use of ARIA attributes -->
+          <div>
+              <label for="email2">Email:</label>
+              <input type="email" id="email2" name="email" aria-required="true">
+          </div>
+    </form>
+  </div>
 
-  <form>
-    
-        <!-- Example 6: No ARIA roles for custom controls -->
-        <div>
-            <span>No ARIA roles for custom controls</span>
-            <label for="custom-slider">Custom Slider:</label>
-            <div id="custom-slider" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
-        </div>
-  </form>
-
-  <form>
-    
-        <!-- Example 7: Incorrect use of ARIA attributes -->
-        <div>
-            <span>Incorrect Use of ARIA attributes</span>
-            <label for="email2">Email:</label>
-            <input type="email" id="email2" name="email" aria-required="true">
-        </div>
-  </form>
-
-  <form>
+    <div class="form-item">
+    <span>Missing alt text for image buttons</span>
+    <form>
     
         <!-- Example 8: Missing alt text for image buttons -->
         <div>
-            <span>Missing alt text for image buttons</span>
             <label for="search">Search:</label>
             <input type="text" id="search" name="search">
             <input type="image" src="search-icon.webp" style="width:15px; height:15px;" alt="">
         </div>
   </form>
+    </div>
 
-  <form>
-        <!-- Example 9: Missing labels for dropdowns -->
-        <div>
-            <span>Missine labels for dropdowns</span>
-            <label for="country">Country:</label>
-            <select id="country" name="country">
-                <option value="usa">United States</option>
-                <option value="canada">Canada</option>
-                <option value="uk">United Kingdom</option>
-            </select>
-        </div>
-  </form>
 
-  <form>  
-        <!-- Example 10: No error message for invalid input -->
-        <div> 
-            <span>No error message for invalid input</span>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-            <!-- Error message should appear here if input is invalid -->
-        </div>
-    </form>
+    <div class="form-item">
+          
+      <span>Missine labels for dropdowns</span>
+      <form>
+            <!-- Example 9: Missing labels for dropdowns -->
+            <div>
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+            </div>
+      </form>
+    </div>
+
+    <div class="form-item">
+          
+      <span>No error message for invalid input</span>
+      <form>  
+            <!-- Example 10: No error message for invalid input -->
+            <div> 
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <!-- Error message should appear here if input is invalid -->
+            </div>
+        </form>
+    </div>
+    
   </div>
 </div>
   
